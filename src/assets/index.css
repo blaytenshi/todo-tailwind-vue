@@ -21,4 +21,8 @@ h1 {
     @apply border-blue-400 outline-none;
 }
 
+.border-spacing-0 {
+    border-spacing: 0;
+}
+
 @tailwind utilities;

@@ -5,6 +5,7 @@ import store from './store'
 import TodoListPage from './components/TodoListPage'
 import EventHandlingPage from './components/EventHandlingPage'
 import FormHandlingPage from './components/FormHandlingPage'
+import TableStylingPage from './components/TableStylingPage'
 
 import './assets/index.css';
 
@@ -17,7 +18,8 @@ export const router = new VueRouter({
     routes: [
         { path: '/', name: 'TodoListPage', component: TodoListPage },
         { path: '/eventHandling', name: 'EventHandlingPage', component: EventHandlingPage },
-        { path: '/formHandling', name: 'FormHandlingPage', component: FormHandlingPage }
+        { path: '/formHandling', name: 'FormHandlingPage', component: FormHandlingPage },
+        { path: '/tableStyling', name: 'TableStylingPage', component: TableStylingPage }
     ]
 });
 
