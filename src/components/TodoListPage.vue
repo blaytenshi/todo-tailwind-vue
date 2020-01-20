@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2>Todo List</h2>
+        <h1>Todo List</h1>
         <TodoListItem
                 v-for="todo in allTodos"
                 :todo="todo"

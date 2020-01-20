@@ -21,13 +21,3 @@
         },
     }
 </script>
-
-<style scoped>
-    .btn-blue {
-        @apply border-blue-700 text-white py-2 px-4 rounded-lg bg-blue-500;
-    }
-
-    .btn-blue:hover {
-        @apply bg-blue-700
-    }
-</style>
