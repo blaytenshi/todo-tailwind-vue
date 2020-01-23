@@ -8,32 +8,30 @@
                 <th>Super Amount</th>
             </tr>
         </thead>
-        <tbody>
+        <tbody v-if="data === null">
             <tr>
-                <td>Ben</td>
-                <td>30</td>
-                <td>ben@growsuper.com</td>
-                <td>$1,000,000</td>
+                <td colspan="4">Loading...</td>
             </tr>
-            <tr>
-                <td>Jimmy</td>
-                <td>33</td>
-                <td>jimmy@growsuper.com</td>
-                <td>$50,000</td>
-            </tr>
-            <tr>
-                <td>Michael</td>
-                <td>33</td>
-                <td>michael@uts.edu.au</td>
-                <td>$100,000</td>
-            </tr>
+        </tbody>
+        <tbody v-else>
+            <PersonRow v-for="person in data" :person="person" :key="person.name" />
         </tbody>
     </table>
 </template>
 
 <script>
+    import PersonRow from './PersonRow';
+
     export default {
-        name: 'NameTable'
+        name: 'NameTable',
+        components: {
+            PersonRow
+        },
+        props: {
+            loading: { type: Boolean, default: false },
+            data: { type: Array, default: null },
+            count: { type: Number, default: 0 }
+        },
     }
 </script>
 
