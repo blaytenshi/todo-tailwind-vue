@@ -28,22 +28,37 @@
             </select>
             <span>Selected: {{ selected }}</span>
         </div>
+        <hr class="m-4"/>
+        <div>
+            <p>Checkboxes</p>
+            <MyCustomCheckbox
+                    v-for="(checkbox) in checkboxes"
+                    :checkbox="checkbox"
+                    :key="checkbox.name"
+            />
+        </div>
     </div>
 </template>
 
 <script>
     import MyInput from './MyInput';
+    import MyCustomCheckbox from './MyCustomCheckbox';
 
     export default {
         name: 'FormHandlingPage',
         components: {
-            MyInput
+            MyInput,
+            MyCustomCheckbox
         },
         data: function() {
             return {
                 message: '',
                 selected: '',
                 myValue: '',
+                checkboxes: [
+                    { name: "Option 1", value: "option1", checked: false },
+                    { name: "Option 2", value: "option2", checked: true }
+                ]
             }
         },
         methods: {

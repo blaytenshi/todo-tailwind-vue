@@ -7,11 +7,22 @@
             <router-link to="/formHandling" class="btn-blue mx-1">Form Handling Page</router-link>
             <router-link to="/tableStyling" class="btn-blue mx-1">Table Styling Page</router-link>
         </div>
+        <RenderProps :myProp="myProp" />
     </div>
 </template>
 
 <script>
+    import RenderProps from "./RenderProps";
+
     export default {
-        name: 'TodoHeader'
+        name: 'TodoHeader',
+        components: {
+            RenderProps
+        },
+        data: function() {
+            return {
+                myProp: "Render This!"
+            }
+        }
     }
 </script>
