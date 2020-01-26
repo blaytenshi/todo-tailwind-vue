@@ -13,9 +13,20 @@
                 <p class="italic">Footer Content</p>
             </template>
         </MyNamedSlotComponent>
-        <MyObjectSlotComponent :specialObject="specialObject" class="m-2">
-            <template v-slot="externalObject" />
+        <MyObjectSlotComponent class="m-2">
+            <template v-slot:internalData="boundPropsOfInternalDataSlot">
+                {{ boundPropsOfInternalDataSlot.myExternalData.internalProperty1 }}
+            </template>
+            <template v-slot:doggoData="boundPropsOfDoggoDataSlot">
+                {{ boundPropsOfDoggoDataSlot.myExternalDoggoData.axe.name }}
+                {{ boundPropsOfDoggoDataSlot.myExternalURLData[1].url }}
+            </template>
         </MyObjectSlotComponent>
+        <MyDeprecatedSlotComponent class="m-2">
+            <p slot="header" slot-scope="boundPropsOfHeaderProps">
+                {{ boundPropsOfHeaderProps.myExternalHeaderData.title }}
+            </p>
+        </MyDeprecatedSlotComponent>
     </div>
 </template>
 
@@ -23,6 +34,7 @@
     import MySlotComponent from './MySlotComponent'
     import MyObjectSlotComponent from './MyObjectSlotComponent'
     import MyNamedSlotComponent from './MyNamedSlotComponent'
+    import MyDeprecatedSlotComponent from './MyDeprecatedSlotComponent'
 
     export default {
         name: "index.vue",
@@ -30,6 +42,7 @@
             MySlotComponent,
             MyObjectSlotComponent,
             MyNamedSlotComponent,
+            MyDeprecatedSlotComponent,
         },
         data() {
             return {
@@ -37,10 +50,6 @@
                     property1: "property1Value",
                     property2: 2
                 },
-                externalObject: {
-                    externalProperty1: "externalProp1Value",
-                    externalProperty2: 4
-                }
             }
         }
     }
