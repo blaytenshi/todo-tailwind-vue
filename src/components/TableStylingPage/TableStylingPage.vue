@@ -7,7 +7,7 @@
 
 <script>
     import NameTable from './NameTable';
-    import { getTableData } from '../MyApi'
+    import { getTableData } from '../../MyApi'
 
     export default {
         name: 'TableStylingPage',

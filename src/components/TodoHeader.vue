@@ -6,6 +6,8 @@
             <router-link to="/" class="btn-blue mx-1">Home Page</router-link>
             <router-link to="/formHandling" class="btn-blue mx-1">Form Handling Page</router-link>
             <router-link to="/tableStyling" class="btn-blue mx-1">Table Styling Page</router-link>
+            <router-link to="/elementUi" class="btn-blue mx-1">Element Ui Styling Page</router-link>
+            <router-link to="/slots" class="btn-blue mx-1">VueJS Slots Page</router-link>
         </div>
         <RenderProps :myProp="myProp" />
     </div>

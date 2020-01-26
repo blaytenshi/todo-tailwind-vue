@@ -7,7 +7,7 @@
 </template>
 
 <script>
-    import MyComponent from './MyComponent';
+    import MyComponent from '../MyComponent';
 
     export default {
         name: 'EventHandlingPage',
