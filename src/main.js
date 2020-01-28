@@ -2,6 +2,10 @@ import Vue from 'vue'
 import App from './App.vue'
 import VueRouter from 'vue-router'
 import store from './store'
+
+import ElementUI from 'element-ui'
+import 'element-ui/lib/theme-chalk/index.css'
+
 import TodoListPage from './components/TodoListPage/TodoListPage'
 import EventHandlingPage from './components/EventHandlingPage/EventHandlingPage'
 import FormHandlingPage from './components/FormHandlingPage/FormHandlingPage'
@@ -14,6 +18,7 @@ import './assets/index.css';
 Vue.config.productionTip = false;
 
 Vue.use(VueRouter);
+Vue.use(ElementUI);
 
 export const router = new VueRouter({
     mode: 'history', // tells VueRouter to use BrowserRouter instead of HashRouter
