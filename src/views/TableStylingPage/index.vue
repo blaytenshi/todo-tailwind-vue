@@ -6,7 +6,7 @@
 </template>
 
 <script>
-    import NameTable from './NameTable';
+    import NameTable from '../../components/NameTable';
     import { getTableData } from '../../MyApi'
 
     export default {

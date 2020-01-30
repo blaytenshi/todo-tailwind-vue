@@ -41,8 +41,8 @@
 </template>
 
 <script>
-    import MyInput from './MyInput';
-    import MyCustomCheckbox from './MyCustomCheckbox';
+    import MyInput from '../../components/MyInput';
+    import MyCustomCheckbox from '../../components/MyCustomCheckbox';
 
     export default {
         name: 'FormHandlingPage',

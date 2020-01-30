@@ -31,10 +31,10 @@
 </template>
 
 <script>
-    import MySlotComponent from './MySlotComponent'
-    import MyObjectSlotComponent from './MyObjectSlotComponent'
-    import MyNamedSlotComponent from './MyNamedSlotComponent'
-    import MyDeprecatedSlotComponent from './MyDeprecatedSlotComponent'
+    import MySlotComponent from '../../components/MySlotComponent'
+    import MyObjectSlotComponent from '../../components/MyObjectSlotComponent'
+    import MyNamedSlotComponent from '../../components/MyNamedSlotComponent'
+    import MyDeprecatedSlotComponent from '../../components/MyDeprecatedSlotComponent'
 
     export default {
         name: "index.vue",

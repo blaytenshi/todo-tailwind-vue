@@ -26,8 +26,8 @@
                     prop="powerLevel"
                     label="Power Level"
                     sortable
+                    :sort-by="powerLvlDateSort"
             >
-
             </el-table-column>
         </el-table>
     </div>
@@ -42,7 +42,7 @@
                     date: '2016-05-03',
                     name: 'Daniel',
                     address: 'No. 189, Grove St, Los Angeles',
-                    powerLevel: 9000
+                    powerLevel: 9500
                 }, {
                     date: '2016-05-02',
                     name: 'Chris',
@@ -59,6 +59,13 @@
                     address: 'No. 189, Grove St, Los Angeles',
                     powerLevel: 1
                 }]
+            }
+        },
+        methods: {
+            powerLvlDateSort(row, index) {
+                console.log("hello there");
+                console.log(row.powerLevel);
+                return row.powerLevel
             }
         }
     }

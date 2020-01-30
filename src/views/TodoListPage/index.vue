@@ -14,7 +14,7 @@
 </template>
 <script>
     import { mapGetters } from 'vuex';
-    import TodoListItem from '../TodoListItem';
+    import TodoListItem from '../../components/TodoListItem';
 
     export default {
         name: 'TodoListPage',

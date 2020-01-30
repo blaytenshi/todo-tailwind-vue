@@ -6,12 +6,13 @@ import store from './store'
 import ElementUI from 'element-ui'
 import 'element-ui/lib/theme-chalk/index.css'
 
-import TodoListPage from './components/TodoListPage/TodoListPage'
-import EventHandlingPage from './components/EventHandlingPage/EventHandlingPage'
-import FormHandlingPage from './components/FormHandlingPage/FormHandlingPage'
-import TableStylingPage from './components/TableStylingPage/TableStylingPage'
-import ElementUiPage from './components/ElementUiPage/ElementUiPage'
-import SlotsPage from './components/SlotsPage'
+import TodoListPage from './views/TodoListPage'
+import EventHandlingPage from './views/EventHandlingPage'
+import FormHandlingPage from './views/FormHandlingPage'
+import TableStylingPage from './views/TableStylingPage'
+import ElementUiPage from './views/ElementUiPage'
+import SlotsPage from './views/SlotsPage'
+import ComponentIsPage from './views/ComponentIsPage'
 
 import './assets/index.css';
 
@@ -28,7 +29,8 @@ export const router = new VueRouter({
         { path: '/formHandling', name: 'FormHandlingPage', component: FormHandlingPage },
         { path: '/tableStyling', name: 'TableStylingPage', component: TableStylingPage },
         { path: '/elementUi', name: 'ElementUiPage', component: ElementUiPage },
-        { path: '/slots', name: 'SlotsPage', component: SlotsPage }
+        { path: '/slots', name: 'SlotsPage', component: SlotsPage },
+        { path: '/componentis', name: 'ComponentIs', component: ComponentIsPage }
     ]
 });
 
