@@ -1,6 +1,7 @@
 <template>
     <div>
         <h1>Todo List</h1>
+        <AddTodo v-model="todo" @create-todo="handleCreateTodo" />
         <TodoListItem
                 v-for="todo in allTodos"
                 :todo="todo"
@@ -13,16 +14,29 @@
     </div>
 </template>
 <script>
-    import { mapGetters } from 'vuex';
+    import { mapActions, mapGetters } from 'vuex';
+    import AddTodo from '../../components/AddTodo';
     import TodoListItem from '../../components/TodoListItem';
 
     export default {
         name: 'TodoListPage',
+        data() {
+            return {
+                todo: { type: Object, default: () => {} }
+            }
+        },
         components: {
+            AddTodo,
             TodoListItem
         },
         computed: {
             ...mapGetters(['allTodos']),
+        },
+        methods: {
+            handleCreateTodo() {
+                alert("handle Create Todo!")
+            }
+            // ...mapActions(['addTodo'])
         }
     }
 </script>
