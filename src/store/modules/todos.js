@@ -15,12 +15,18 @@ const actions = {
     toggleDone: ({ commit }, id) => {
         commit('toggleDoneStatus', id );
     },
+    addTodo: ({ commit }, todoName) => {
+        commit('createTodo', todoName);
+    }
 };
 
 const mutations = {
     toggleDoneStatus: (state, id) => {
         const index = state.todos.findIndex(todo => todo.id === id );
         state.todos[index].done = !state.todos[index].done;
+    },
+    createTodo: (state, todoName) => {
+        state.todos.push({ id: state.todos.length + 1, name: todoName, done: false })
     }
 };
 

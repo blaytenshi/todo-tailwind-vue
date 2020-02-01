@@ -1,7 +1,7 @@
 <template>
     <div>
         <h1>Todo List</h1>
-        <AddTodo v-model="todo" @create-todo="handleCreateTodo" />
+        <AddTodo />
         <TodoListItem
                 v-for="todo in allTodos"
                 :todo="todo"
@@ -20,23 +20,12 @@
 
     export default {
         name: 'TodoListPage',
-        data() {
-            return {
-                todo: { type: Object, default: () => {} }
-            }
-        },
         components: {
             AddTodo,
             TodoListItem
         },
         computed: {
             ...mapGetters(['allTodos']),
-        },
-        methods: {
-            handleCreateTodo() {
-                alert("handle Create Todo!")
-            }
-            // ...mapActions(['addTodo'])
         }
     }
 </script>

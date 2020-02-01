@@ -1,24 +1,23 @@
 <template>
     <div>
         <label for="createTodo">Whatcha got to do?</label>
-        <input id="createTodo" type="text" />
-        <button class="btn-blue" @click="createTodo">Add to List</button>
+        <input id="createTodo" v-model="todo" type="text" />
+        <button class="btn-blue mx-1" @click="addTodo(todo)">Add to List</button>
     </div>
 </template>
 
 <script>
+    import { mapActions } from 'vuex';
+
     export default {
         name: "AddTodo",
         data() {
             return {
-                todo: { type: String, default: "" }
+                todo: ""
             }
         },
         methods: {
-            createTodo() {
-                alert('calling createTodo');
-                this.$emit('create-todo')
-            }
+            ...mapActions(['addTodo'])
         }
     }
 </script>
