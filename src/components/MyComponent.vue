@@ -9,7 +9,7 @@
     export default {
         name: 'MyComponent',
         props: {
-            testProp: String
+            testProp: { type: String, default: "default value of testProp in MyComponent" }
         }
     }
 </script>
