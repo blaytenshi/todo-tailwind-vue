@@ -13,6 +13,7 @@ import TableStylingPage from './views/TableStylingPage'
 import ElementUiPage from './views/ElementUiPage'
 import SlotsPage from './views/SlotsPage'
 import ComponentIsPage from './views/ComponentIsPage'
+import VueLifecyclePage from './views/VueLifecyclePage'
 
 import './assets/index.css';
 
@@ -30,7 +31,8 @@ export const router = new VueRouter({
         { path: '/tableStyling', name: 'TableStylingPage', component: TableStylingPage },
         { path: '/elementUi', name: 'ElementUiPage', component: ElementUiPage },
         { path: '/slots', name: 'SlotsPage', component: SlotsPage },
-        { path: '/componentis', name: 'ComponentIs', component: ComponentIsPage }
+        { path: '/componentis', name: 'ComponentIs', component: ComponentIsPage },
+        { path: '/vuelifecycle', name: 'VueLifecycle', component: VueLifecyclePage }
     ]
 });
 

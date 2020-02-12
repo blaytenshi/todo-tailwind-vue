@@ -1,20 +1,23 @@
 <template>
-    <span>{{ message }}</span>
+    <div>
+        <h3>{{ profile.firstName }} {{ profile.lastName }}</h3>
+        <li>
+            <ul>Age: {{ profile.age }}</ul>
+            <ul>Email: {{ profile.email }}</ul>
+        </li>
+    </div>
 </template>
 
 <script>
     export default {
         name: 'MyTestableComponent',
-        data() {
-            return {
-                message: "Hello!"
-            }
-        },
         props: {
-            messageProp: { type: String, default: "" }
-        },
-        created() {
-
+            profile: { type: Object, default: () => ({
+                    firstName: '',
+                    lastName: '',
+                    age: 0,
+                    email: ''
+            }) }
         }
     }
 </script>

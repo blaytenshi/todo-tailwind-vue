@@ -1,5 +1,5 @@
 <template>
-    <MyTestableComponent messageProp="hello!" />
+    <MyTestableComponent messageProp="Jimmy" />
 </template>
 
 <script>

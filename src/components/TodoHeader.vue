@@ -9,6 +9,7 @@
             <router-link to="/elementUi" class="btn-blue mx-1">Element Ui Styling Page</router-link>
             <router-link to="/slots" class="btn-blue mx-1">VueJS Slots Page</router-link>
             <router-link to="/componentis" class="btn-blue mx-1">Component Is Page</router-link>
+            <router-link to="/vuelifecycle" class="btn-blue mx-1">VueLifecycle Page</router-link>
         </div>
         <RenderProps :myProp="myProp" />
     </div>
